@@ -687,7 +687,7 @@ export default class BottomSheetBehavior extends React.Component<Props, State> {
       // @ts-ignore
       this.state.snapPoints[this.state.propsToNewIndices[index]]
     )
-    this.isManuallySetValue.setValue(1)
+    setTimeout(() => this.isManuallySetValue.setValue(1), 0);
   }
 
   private height: Animated.Value<number> = new Value(0)
